@@ -39,6 +39,7 @@ function hideSafeCell(gBoard, i, j) {
 
 
 function onSafeClick() {
+  if(!gGame.isOn) return
   SAFECLICKS--
   if (SAFECLICKS < 0) return
   var audio = new Audio('sounds/safeClick.wav');
