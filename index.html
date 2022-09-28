@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Minesweeper</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/Sprint.css">
-  </head>
-  <body onload="InitGame()" class="nohighlights">
-    <h1 class="gameResult fullyHidden">-</h1>
-    <div class="gameHints">
-      <button class="hintsBtn" onclick="onHint() ;startClock()">HINT</button>
-      <p class="hintsEl"></p>
+
+<head>
+  <title>Minesweeper</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/Sprint.css">
+</head>
+
+<body onload="InitGame()" class="nohighlights">
+  <h1 class="gameResult fullyHidden">-</h1>
+  <div class="GameEl">
+    <h1 class="titleEl">MineSweeper</h1>
+    <div class="gameEls">
+      <div class="timerEl">0</div>
+      <button class="restartBtn" onClick="onRestart()">🙂</button>
+      <span class="scoreEl"></span>
     </div>
-    <div class="GameEl">
-      <div class="bestScoreEl"></div>
-      <h1 class="titleEl flicker-4">MineSweeper</h1>
-      <div class="gameEls">
-        <span class="timerEl">0</span>
-        <button class="restartBtn" onClick="onRestart()">🙂</button>
-        <p class="scoreEl heartbeat"><p>
-      </div>
-      <table class="tableEl">
-      </table>
-      <div class="lvlBtns">
-       <button class="Btns safeClickBtn" onclick="onSafeClick()">Safe clicks: <span class="safeClicksLeft">3</span></button>
-       <!-- <button class="Btns undoBtn" onclick="undo()">Undo</button>
-       <button class="Btns megaHintBtn" onclick="Onboom()">7BOOM</button> -->
-      </div>
-      <div class="lvlBtns">
-        <button class="Btn easyBtn" onclick="easyBtn()">Easy</button>
+    <table class="tableEl">
+    </table>
+    <div class="lvlBtns">
+      <button class="Btn easyBtn" onclick="easyBtn()">Easy</button>
       <button class="Btn mediumBtn" onclick="mediumBtn()">Intermediate</button>
       <button class="Btn expertBtn" onclick="expertBtn()">Expert</button>
-      </div>
     </div>
-    <script src="js/Sprint.js" async defer></script>
-    <script src="js/utils.js" async defer></script>
-  </body>
+  </div>
+  <script src="js/Sprint.js" async defer></script>
+  <script src="js/utils.js" async defer></script>
+</body>
+
 </html>
